@@ -1,0 +1,13 @@
+#bgcustom {
+margin-top:-0%;
+background-image: url("../img/bg-custom/tes.png");
+          /**border-radius: 10%; */
+z-index: -1;
+/**background-color : #fff;*/
+background-size: 100%;
+background-repeat: no-repeat;
+          }
+.shadow-cust {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
