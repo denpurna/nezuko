@@ -39,19 +39,17 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700">
 
         <!-- Page JS Plugins CSS -->
-        <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fplugins%2Fslick%2Fslick.min.css?alt=media&token=a5a9928e-ec56-4ada-b5af-1a59aba3249f">
-        <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fplugins%2Fslick%2Fslick-theme.min.css?alt=media&token=6fef9d55-ca20-4911-9bbd-c6510cf5cce0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.css">
 
         <!-- Bootstrap and OneUI CSS framework -->
-        <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fcss%2Fbootstrap.min.css?alt=media&token=0b0c3d25-0fea-4776-a99b-352510db99b0">
-        <link rel="stylesheet" id="css-main" href="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fcss%2Foneui.css?alt=media&token=188e0c12-d8c7-4541-8003-4841f2091090">
+        <link rel="stylesheet" href="https://nezukostore.web.app/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="https://nezukostore.web.app/assets/css/oneui.css?">
         
         <!-- Custom CSS -->
-        <link rel="stylesheet" id="css-main" href="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fcss%2Fcustom.css?alt=media&token=0bfa07e7-f705-4638-9fa4-1a17eadcdb6b">
-       
-        <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
-        <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
-        <!-- END Stylesheets -->
+        <link rel="stylesheet" id="css-main" href="https://nezukostore.web.app/assets/css/custom.css?">
+
     </head>
     <body>
 
@@ -62,7 +60,8 @@
 
             <!-- Header -->
             <header id="header-navbar" class="content-mini content-mini-full">
-              <h1 class="page-heading">Nezuko Store</h1>
+              <img width="150px" src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fimg%2Ficon%2Flogo-header.png?alt=media&token=cea6d2a5-e77a-4cb4-b779-3fd7c67ab43a" alt="">
+            
                 <!-- END Header Navigation Left -->
             </header>
             <!-- END Header -->
@@ -85,8 +84,9 @@
                         <div class="col-sm-12">
                           <h2 class="h3 font-w600">Nezu Coin</h2>
                             <h1 class="h1 font-w600">
-                                <sup>Rp</sup>123{{saldo_member}}
+                                <sup><small>Rp</small></sup>{{saldo_user}}
                             </h1>
+                            <small>{{nama_user}}</small>
                         </div>
                     </div>
                     </br>
@@ -153,7 +153,7 @@
                                <div class="font-w600 push-5-t">Voucher</div>
                                </div>
                                </div>
-                                  <div class="col-xs-3">
+                                  <div data-toggle="modal" data-target="#apps-modal" id="btn-icon-e-wallet" class="col-xs-3">
                                     <div class="push-5">
                               <i id="btn-icon-1" class="fas fa-coins fa-2x text-warning"></i>
                                   <div class="font-w600 push-5-t">E-Wallet</div>
@@ -240,7 +240,7 @@
         <!-- Apps Modal -->
         <!-- Opens from the button in the header -->
         <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-sm modal-dialog modal-dialog-center modal-dialog-popout">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-popout">
             <div class="modal-content">
               <!-- Apps Block -->
               <div id="content-modal"></div>
@@ -252,18 +252,19 @@
         <!-- END Apps Modal -->
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.min.js?alt=media&token=6282a7cf-6eb9-4c89-839b-b4681c605770"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fbootstrap.min.js?alt=media&token=ed081799-114e-4b9b-9408-6740a014cda8"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.slimscroll.min.js?alt=media&token=c22cef45-88e4-43c2-871d-cba2fad54689"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.scrollLock.min.js?alt=media&token=380055e4-7ce4-4f50-b6fc-af334187692e"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.appear.min.js?alt=media&token=f67cf088-5542-437c-8ef7-f84290b82ea2"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.countTo.min.js?alt=media&token=ca074460-3385-4e9d-87cb-97e998ebcd65"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjquery.placeholder.min.js?alt=media&token=40d2960d-a283-4116-b213-78e3219d0a6d"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fcore%2Fjs.cookie.min.js?alt=media&token=33cce0d5-50a6-46b4-8905-8effcfccd8f4"></script>
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fapp.js?alt=media&token=f4da0e9b-54e1-431f-8549-ec9377c056aa"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/bootstrap.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.appear.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/core/js.cookie.min.js"></script>
+        <script src="https://nezukostore.web.app/assets/js/app.js"></script>
         
         <!-- Page Plugins -->
-        <script src="https://firebasestorage.googleapis.com/v0/b/nezukostore.appspot.com/o/assets%2Fjs%2Fplugins%2Fslick%2Fslick.min.js?alt=media&token=382247e5-4638-4914-8a93-29ebfe590d55"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://unpkg.com/slick-loader@1.1.20/slick-loader.min.js"></script>
 
         <!-- Page JS Code -->
         
@@ -272,11 +273,14 @@
     var url_modal_game_mobile,
         url_menu_atas,
         url_menu_tengah,
-        url_slider_promo;
+        url_slider_promo,
+        url_modal_e_wallet;
         
     url_modal_game_mobile = "https://raw.githubusercontent.com/denpurna/nezuko/main/modal-game-mobile.html";
-    url_slider_promo = "slider-info-promo.html";
+    url_slider_promo = "https://raw.githubusercontent.com/denpurna/nezuko/main/slider-info-promo.html";
     // load data html
+    url_modal_e_wallet = "modal-e-wallet.html";
+    SlickLoader.enable();
     loadslider();
     //loadmenuatas();
     
@@ -288,6 +292,7 @@
       success: function(result){
         $("#slider-info-promo").html(result);
         //$("#myModal").modal('show'); 
+        SlickLoader.disable();
 
     }});
     }
@@ -302,12 +307,12 @@
     }});
     }
     
-    $("#btn-icon-1").on("click", function() {
-      $('body').load(url);
-    //alert("hi")
-    });
     $("#btn-icon-paket-data").on("click", function() {
     $('#content-modal').load(url_modal_game_mobile);
+    //alert("hi")
+    });
+    $("#btn-icon-e-wallet").on("click", function() {
+    $('#content-modal').load(url_modal_e_wallet);
     //alert("hi")
     });
   });
